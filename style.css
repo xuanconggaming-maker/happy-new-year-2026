@@ -1,30 +1,42 @@
-
-
-
-body {
-  width: 100%;
-  height: 100%;
-}
-.demo {
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-}
-
-.text-main{
-    color:aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-}
-
-
-.demo>img{
-    position: absolute;
+/* Đảm bảo khung hình toàn màn hình điện thoại */
+html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
-    opacity: 1;
-    /* object-fit: cover; */
+    overflow: hidden;
+    background-color: #000;
+}
+
+.demo {
+    display: flex; /* Căn giữa bằng Flexbox */
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.demo img {
+    position: absolute; /* Để ảnh không làm lệch khung hình */
+    max-width: 90%;
+    max-height: 70%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    
+    /* Làm sáng ảnh theo yêu cầu trước đó */
+    filter: brightness(1.3); 
+    
+    /* Đặt lớp thấp (Lớp 1) để pháo hoa đè lên */
+    z-index: 1; 
+}
+
+/* Thư viện fireworks sẽ tạo ra thẻ canvas, ta đưa nó lên lớp cao hơn */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99; /* Lớp 99 sẽ đè lên lớp 1 của ảnh */
+    pointer-events: none; /* Giúp bạn vẫn chạm được vào màn hình để phát nhạc */
 }
