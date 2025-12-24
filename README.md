@@ -1,2 +1,2 @@
-# Happy-New-Year-2023
-Happy New Year 2023 Code using HTML, CSS &amp; JQuery CDN (Realistic Animation JQuery CDN)
+# Happy-New-Year-2026
+Happy New Year 2026 Code using HTML, CSS &amp; JQuery CDN (Realistic Animation JQuery CDN)
